@@ -1,14 +1,9 @@
 import 'dart:io';
 
+import '../menu-option/menu_input_write_data.dart';
 import 'student_portal.dart';
 
 allStudentInfo() async {
   print("Enrolled Students");
-  var studentInfoTxtFile = File('../saved-data/students_info.txt');
-  var content;
-  if (await studentInfoTxtFile.exists()) {
-    // Write File
-    var writeData =
-        await File('../saved-data/students_info.txt').writeAsString("All Student Data\n ");
-  }
+  WriteMenuOption().dataGet();
 }
